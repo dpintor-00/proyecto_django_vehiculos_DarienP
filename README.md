@@ -1,10 +1,14 @@
 # INSTRUCCIONES DE USO
 
-## Inicializar entorno virtual:
+## Preparar entorno virtual:
 1.- Iniciar nueva terminal
 2.- Ejecutar comando
 ```
 python -m venv venv
+```
+3.- Inicializar el entorno virtual ejecutando
+```
+.\venv\Scripts\activate
 ```
 
 ## Pasos para iniciar el proyecto:
