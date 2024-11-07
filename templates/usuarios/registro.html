@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% block contenido %}
+<header class="container text-center py-3">
+    <h1>Registro de nuevo usuario</h1>
+</header>
+
+<main class="container">
+    <section>
+        <form method="post">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="Registrarse">
+        </form>
+    </section>
+</main>
+
+{% endblock contenido %}

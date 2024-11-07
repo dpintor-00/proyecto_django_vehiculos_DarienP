@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+{% block contenido %}
+
+<header>
+    <h1 class="text-center py-3">Catálogo de Vehículos</h1>
+</header>
+
+<main class="container py-1">
+    <section>
+
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                  <th scope="col">Marca</th>
+                  <th scope="col">Modelo</th>
+                  <th scope="col">Serial Carrocería</th>
+                  <th scope="col">Serial Motor</th>
+                  <th scope="col">Categoría</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Condición precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for vehiculo in autos %}
+                <tr>
+                  <td>{{vehiculo.marca}}</td>
+                  <td>{{vehiculo.modelo}}</td>
+                  <td>{{vehiculo.serial_carroceria}}</td>
+                  <td>{{vehiculo.serial_motor}}</td>
+                  <td>{{vehiculo.categoria}}</td>
+                  <td>$ {{vehiculo.precio}}</td>
+                  <td>{{vehiculo.condicion_precios}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+        </table>
+
+    </section>
+</main>
+{% endblock contenido %}
+
+
